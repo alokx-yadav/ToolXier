@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Image Resizer Tool</title>
+  <link rel="stylesheet" href="imageresize.css" />
+  <title>About Us - ToolXier</title>
+<meta name="description" content="Learn more about ToolXier, our mission, and the team behind the tools you use daily.">
+   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet"/>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+
+  <video autoplay muted loop playsinline id="bg-video">
+    <source src="bg1.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <header>
+    <div class="navbar">
+      <div class="header-content">
+        <a href="index.html" class="logo">ToolXier</a>
+        <nav>
+          <ul class="nav-links" id="navLinks">
+           <a href="index.html">Home</a>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+ 
+
+  <div class="container">
+    <h1>Resize Your Image</h1>
+    <p id="info">Choose standard size or enter custom dimensions. Download as JPG, PNG, or PDF.</p>
+
+    <div class="upload-box" id="drop-area">
+      <p>Drag & Drop</p>
+      <input type="file" id="fileElem" accept="image/*" />
+      <label for="fileElem">Browse Image</label>
+      <p class="note">Max file size: 5MB</p>
+    </div>
+
+    <div class="resize-options">
+      <select id="presetSelect">
+        <option value="">-- Select Standard Size --</option>
+        <option value="128x128">128 × 128</option>
+        <option value="512x512">512 × 512</option>
+        <option value="800x600">800 × 600</option>
+        <option value="1024x768">1024 × 768</option>
+        <option value="1920x1080">1920 × 1080</option>
+      </select>
+
+      <div class="custom-size">
+        <input type="number" id="width" placeholder="Custom Width (px)">
+        <input type="number" id="height" placeholder="Custom Height (px)">
+      </div>
+
+      <button id="resizeBtn" disabled>Resize</button>
+    </div>
+
+    <!-- Banner Ad -->
+    <div class="ad-banner">
+      <div class="ad-placeholder">[Banner Ad Placeholder – 728x90 or 320x100]</div>
+    </div>
+
+    <div class="download-options" id="downloadButtons" style="display:none;">
+      <button id="downloadJpg">Download JPG</button>
+      <button id="downloadPng">Download PNG</button>
+      <button id="downloadPdf">Download PDF</button>
+    </div>
+
+    <div class="info-box">
+      <h2>How This Works</h2>
+      <p>This tool helps you easily resize any image to fit your needs—whether it’s for social media, printing, website optimization, or document attachment.</p>
+      <ul>
+        <li><strong>Upload:</strong> Choose any image file (max 5MB) using drag & drop or the browse button.</li>
+        <li><strong>Select Size:</strong> Use standard dimensions or enter your own custom width and height.</li>
+        <li><strong>Resize:</strong> Click "Resize" to generate your new image instantly.</li>
+        <li><strong>Download:</strong> You can then download the resized image as JPG, PNG, or even a compact PDF.</li>
+      </ul>
+      <p><strong>Why resize?</strong> Resizing helps reduce image file size, improve load speeds on websites, and fit dimensions for apps, emails, or online forms.</p>
+      <p>This all happens locally in your browser—your images never leave your device. It's safe, private, and fast.</p>
+    </div>
+
+    <h5>--------※‖※‖※‖※--------</h5>
+  </div>
+
+    <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <p>© 2025 <strong>ToolXier</strong> All rights reserved.</p>
+      <div class="social-icons">
+        <a href="https://www.linkedin.com/in/alok-ranjan-a317b430a/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://www.instagram.com/toolxier/" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://x.com/ToolXier" target="_blank"><i class="fab fa-twitter"></i></a>
+      </div>
+    </div>
+    <div class="footer-links">
+      <a href="privacy.html">Privacy Policy</a> |
+      <a href="terms.html">Terms</a> |
+      <a href="disclaimer.html">Disclaimer</a> |
+      <a href="about.html">About</a> |
+      <a href="contact.html">Contact</a>
+    </div>
+  </footer>
+
+  <script src="imageresize.js"></script>
+</body>
+</html>

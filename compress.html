@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EWWR999H5S"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-EWWR999H5S');
+</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Image Compressor</title>
+  <title>About Us - ToolXier</title>
+<meta name="description" content="Learn more about ToolXier, our mission, and the team behind the tools you use daily.">
+  <link rel="stylesheet" href="compress.css" />
+   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet"/>
+</head>
+<body>
+  <video autoplay muted loop playsinline id="bg-video">
+    <source src="bg1.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <header>
+    <div class="navbar">
+      <div class="header-content">
+        <a href="index.html" class="logo">ToolXier</a>
+        <nav>
+          <ul class="nav-links" id="navLinks">
+            <a href="index.html">Home</a>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Wrapper -->
+  <div class="wrapper">
+    <!-- Main Compressor Container -->
+    <div class="container" id="mainContainer">
+      <h3>Image Compressor</h3>
+
+      <div id="dropZone" class="drop-zone">
+        <p>📂 Drag & Drop your image</p>
+        <label for="uploadImage" class="upload-label">or <span class="upload-btn">Choose an Image</span></label>
+        <input type="file" id="uploadImage" accept="image/*" hidden>
+        <p id="fileName">No file selected</p>
+      </div>
+
+      <div class="size-input">
+        <input type="number" id="targetSize" placeholder="Enter size" />
+        <select id="unit">
+          <option value="KB">KB</option>
+          <option value="MB">MB</option>
+        </select>
+      </div>
+
+      <div class="action-buttons">
+        <button id="compressBtn">Compress Image</button>
+        <button id="resetBtn" class="reset">Reset</button>
+      </div>
+
+      <div class="output-section" id="outputSection" style="display: none;">
+        <h3>Compressed Image</h3>
+        <div class="preview" id="outputPreview"></div>
+        <div class="download-buttons">
+          <button id="downloadJpg">JPG</button>
+          <button id="downloadPng">PNG</button>
+          <button id="downloadPdf">PDF</button>
+        </div>
+      </div>
+      <h5>--------※‖※‖※‖※--------</h5>
+    </div>
+
+
+    <script type='text/javascript' src='//pl27113772.profitableratecpm.com/b0/15/53/b0155329d319f9424afb6e14215d454e.js'></script>
+    
+    <!-- Info Section -->
+    <section class="info-container">
+      <h2>How This Image Compressor Works</h2>
+      <p>
+        This tool reduces image file size by adjusting image quality using modern compression techniques. It helps speed up loading time, saves bandwidth, and is ideal for sharing or uploading.
+      </p>
+      <ul>
+        <li><strong>Step 1:</strong> Upload or drag and drop an image (JPG, PNG, etc.).</li>
+        <li><strong>Step 2:</strong> Enter your desired target size in KB or MB.</li>
+        <li><strong>Step 3:</strong> The tool compresses the image using quality scaling.</li>
+        <li><strong>Step 4:</strong> You can preview and download the result as JPG, PNG, or PDF.</li>
+      </ul>
+      <p>
+        Compression helps balance image quality and storage efficiency. This tool works entirely in your browser — your data never leaves your device.
+      </p>
+    </section>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <p>© 2025 <strong>ToolXier</strong> All rights reserved.</p>
+      <div class="social-icons">
+        <a href="https://www.linkedin.com/in/alok-ranjan-a317b430a/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://www.instagram.com/toolxier/" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://x.com/ToolXier" target="_blank"><i class="fab fa-twitter"></i></a>
+      </div>
+    </div>
+    <div class="footer-links">
+      <a href="privacy.html">Privacy Policy</a> |
+      <a href="terms.html">Terms</a> |
+      <a href="disclaimer.html">Disclaimer</a> |
+      <a href="about.html">About</a> |
+      <a href="contact.html">Contact</a>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="compress.js"></script>
+</body>
+
+</html>

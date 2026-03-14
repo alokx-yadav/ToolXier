@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>GST Calculator</title>
+  <title>About Us - ToolXier</title>
+<meta name="description" content="Learn more about ToolXier, our mission, and the team behind the tools you use daily.">
+   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="gst.css" />
+</head>
+<body>
+  <!-- Background Video -->
+  <video autoplay muted loop playsinline id="bg-video">
+    <source src="bg1.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <!-- Header -->
+  <header>
+    <div class="navbar">
+      <div class="header-content">
+        <a href="index.html" class="logo">ToolXier</a>
+        <nav>
+          <ul class="nav-links" id="navLinks">
+            <a href="index.html">Home</a>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- Wrapper for content and footer -->
+  <div class="wrapper">
+
+    <!-- GST Calculator Container -->
+    <div class="calculator">
+      <h1>GST Calculator</h1>
+
+      <label for="amount">Enter Amount:</label>
+      <input type="number" id="amount" placeholder="Enter amount in ₹">
+
+      <label for="gstRate">GST Rate:</label>
+      <select id="gstRate" onchange="toggleCustomRate(this.value)">
+        <option value="5">5%</option>
+        <option value="12">12%</option>
+        <option value="18">18%</option>
+        <option value="28">28%</option>
+        <option value="custom">Custom</option>
+      </select>
+
+      <input type="number" id="customRate" placeholder="Enter custom rate" style="display:none;" />
+
+      <label for="type">Tax Type:</label>
+      <select id="type">
+        <option value="exclusive">Exclusive</option>
+        <option value="inclusive">Inclusive</option>
+      </select>
+
+      <button onclick="calculateGST()">Calculate</button>
+
+      <div id="result">
+        <p><strong>Net Amount (Without GST):</strong> ₹<span id="netAmount">0.00</span></p>
+        <p><strong>GST Amount:</strong> ₹<span id="gstAmount">0.00</span></p>
+        <p><strong>Total Amount (With GST):</strong> ₹<span id="totalAmount">0.00</span></p>
+      </div>
+    </div>
+
+    <!-- Info Container -->
+    <section class="info-container">
+      <h2>About This GST Calculator</h2>
+      <p>
+        This GST calculator helps you quickly calculate GST amount and total price based on the selected tax rate. Whether you're a seller or a buyer, it’s useful for understanding how much tax is applied to a product or service.
+      </p>
+      <ul>
+        <li><strong>Step 1:</strong> Enter the base amount in ₹.</li>
+        <li><strong>Step 2:</strong> Select a standard GST rate (5%, 12%, 18%, 28%) or choose custom.</li>
+        <li><strong>Step 3:</strong> Choose the type of GST calculation:
+          <ul>
+            <li><strong>Exclusive:</strong> GST will be added to the base amount.</li>
+            <li><strong>Inclusive:</strong> GST is already included in the amount.</li>
+          </ul>
+        </li>
+        <li><strong>Step 4:</strong> Click Calculate to get Net, GST, and Total.</li>
+      </ul>
+      <p>This tool runs completely in your browser and helps with fast & accurate tax calculations.</p>
+    </section>
+
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <p>© 2025 <strong>ToolXier</strong> All rights reserved.</p>
+      <div class="social-icons">
+        <a href="https://www.linkedin.com/in/alok-ranjan-a317b430a/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://www.instagram.com/toolxier/" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://x.com/ToolXier" target="_blank"><i class="fab fa-twitter"></i></a>
+      </div>
+    </div>
+    <div class="footer-links">
+      <a href="privacy.html">Privacy Policy</a> |
+      <a href="terms.html">Terms</a> |
+      <a href="disclaimer.html">Disclaimer</a> |
+      <a href="about.html">About</a> |
+      <a href="contact.html">Contact</a>
+    </div>
+  </footer>
+
+  <script src="gst.js"></script>
+</body>
+</html>

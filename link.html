@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LinkXier</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="link.css">
+</head>
+<body>
+<nav class="navbar">
+  <div class="nav-content">
+    <a href="#" class="nav-brand">LinkXier</a>
+
+    <!-- Hamburger Icon for Mobile -->
+    <div class="menu-toggle" id="menuToggle">
+      <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="3" y1="6" x2="21" y2="6"></line>
+        <line x1="3" y1="12" x2="21" y2="12"></line>
+        <line x1="3" y1="18" x2="21" y2="18"></line>
+      </svg>
+    </div>
+
+    <div class="nav-links" id="navLinks">
+      <a href="#">Home</a>
+      <a href="https://www.toolxier.xyz">Toolxier</a>
+ 
+    </div>
+  </div>
+</nav>
+
+    <main class="main-content">
+        <div class="container">
+            <header>
+                <h1>Smart Link Shortener</h1>
+                <p>Create clean, short links in a single click.</p>
+            </header>
+
+            <div class="input-section">
+                <div class="input-wrapper">
+                    <input id="longUrl" type="text" placeholder="Paste your long URL here...">
+                    <span id="pasteIcon" title="Paste from clipboard">
+                        <svg xmlns="http://www.w.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect></svg>
+                    </span>
+                </div>
+                <input id="customCode" type="text" placeholder="Custom (optional)">
+            </div>
+
+            <button id="shortenBtn">Generate Short Link</button>
+
+
+			
+
+            <div class="result" id="result"></div>
+
+
+
+			
+            <section class="links-container" id="lastLinksContainer">
+                <div class="links-header">
+                    <h2>Recent Links</h2>
+                    <div>
+                        <button id="sortBtn" class="sort-button">Sort A-Z</button>
+                        <button id="resetBtn" class="reset-button" title="Clear All Links">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path></svg>
+                        </button>
+                    </div>
+                </div>
+                <div class="last-links" id="lastLinks"></div>
+            </section>
+
+            <section class="links-container sorted-container" id="sortedLinksContainer" style="display: none;">
+                 <div class="links-header">
+                    <h2>Sorted Links!!</h2>
+                </div>
+                <div class="last-links" id="sortedLinks"></div>
+            </section>
+        </div>
+
+        <section class="features-section">
+            <h2>Features & Guide</h2>
+            <p class="features-subtitle">Go beyond simply shortening links with our powerful features.</p>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.72"></path><path fill="currentColor" d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.72-1.72"></path></svg></div>
+                    <h3>Shorten & Simplify</h3>
+                    <p>Transform long, ugly links into memorable, shareable short URLs that are easy to manage and distribute.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2L2 7l10 5 10-5-10-5z"></path><path fill="currentColor" d="M2 17l10 5 10-5"></path><path fill="currentColor" d="M2 12l10 5 10-5"></path></svg></div>
+                    <h3>Custom Branding</h3>
+                    <p>Use custom short codes to reinforce your brand identity, increasing trust and recognition with every shared link.</p>
+                </div>
+                 <div class="feature-card">
+                    <div class="feature-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg></div>
+                    <h3>Secure & Reliable</h3>
+                    <p>Our service ensures all your links are protected with HTTPS and are hosted on a reliable, high-availability infrastructure.</p>
+                </div>
+            </div>
+
+            <div class="how-to-use">
+                <h3>How to Use - Best Practices</h3>
+                <ul>
+                    <li><strong>Paste & Go:</strong> For the quickest result, simply paste your URL and click generate.</li>
+                    <li><strong>Brand with Custom Codes:</strong> Use the optional field to create a memorable link like `yourbrand/promo`.</li>
+                    <li><strong>Always Test Your Link:</strong> After creating a link, click it once to ensure it redirects to the correct destination.</li>
+                    <li><strong>Manage Your History:</strong> Use the Sort and Clear buttons to keep your recent links list organized and tidy.</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+    
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2025 Toolxier. All Rights Reserved.</p>
+            <div class="footer-links">
+                <a href="privacy.html">Privacy Policy</a>
+                <span>&bull;</span>
+                <a href="disclaimer.html">Disclaimer</a>
+				<!-- <span>&bull;</span>
+                <a href="about.html">About</a> -->
+				<span>&bull;</span>
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="link.js"></script>
+</body>
+
+</html>
+

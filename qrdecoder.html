@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>QR Decoder | ToolXier</title>
+  <title>About Us - ToolXier</title>
+<meta name="description" content="Learn more about ToolXier, our mission, and the team behind the tools you use daily.">
+	 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="qrdecoder.css">
+</head>
+<body>
+
+  <video autoplay muted loop playsinline id="bg-video">
+    <source src="bg1.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  
+  <header>
+    <div class="navbar">
+      <div class="header-content">
+        <a href="index.html" class="logo">ToolXier</a>
+        <nav>
+          <ul class="nav-links">
+            <a href="index.html">Home</a>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+    <h1>QR Decoder</h1>
+
+    <div class="input-group">
+      <label class="file-label">
+        📁 Choose QR Image
+        <input type="file" id="file-input" accept="image/*" hidden />
+      </label>
+      <button id="start-camera" title="Scan with Camera">📷</button>
+      <button id="reset-btn" title="Reset All" class="reset-btn">🔄</button>
+    </div>
+    <div id="xy">
+	<h5>--------------------------------------------------------</h5>
+	<h5>--------------------------------------------------------</h5>
+	</div>
+
+    <div class="divider"></div>
+
+    <div id="preview-container">
+      <img id="preview-img" src="" alt="QR Preview" />
+    </div>
+
+    <canvas id="qr-canvas" hidden></canvas>
+
+    <video id="video" autoplay playsinline hidden></video>
+
+    <div class="result-box" id="result-box">
+      <h2>Decoded Message:</h2>
+      <div class="decoded-wrapper">
+        <p id="qr-result">No result yet...</p>
+        <button id="copy-btn" title="Copy">📋</button>
+      </div>
+    </div>
+     <h4>--------※‖※‖※‖※--------</h4>
+  </div>
+
+<section class="info-container">
+  <h2>How QR Code Decoding Works</h2>
+  <p>
+    QR (Quick Response) codes are 2D barcodes that store data in a matrix pattern of black and white squares. Each square represents binary information that scanners or cameras can read.
+  </p>
+  <ul>
+    <li><strong>Step 1:</strong> The image is captured from your camera or uploaded from your device.</li>
+    <li><strong>Step 2:</strong> The QR decoding library (<code>jsQR</code>) analyzes the image pixel-by-pixel.</li>
+    <li><strong>Step 3:</strong> If a QR pattern is found, the encoded data (text, URL, etc.) is extracted.</li>
+    <li><strong>Step 4:</strong> The decoded message is displayed in the result box, ready to copy or use.</li>
+  </ul>
+  <p>
+    QR codes are widely used for instant access to websites, apps, and secure data — without typing anything.
+  </p>
+</section>
+
+<script type='text/javascript' src='//pl27113772.profitableratecpm.com/b0/15/53/b0155329d319f9424afb6e14215d454e.js'></script>
+
+    <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <p>© 2025 <strong>ToolXier</strong> All rights reserved.</p>
+      <div class="social-icons">
+        <a href="https://www.linkedin.com/in/alok-ranjan-a317b430a/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://www.instagram.com/toolxier/" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://x.com/ToolXier" target="_blank"><i class="fab fa-twitter"></i></a>
+      </div>
+    </div>
+    <div class="footer-links">
+      <a href="privacy.html">Privacy Policy</a> |
+      <a href="terms.html">Terms</a> |
+      <a href="disclaimer.html">Disclaimer</a> |
+      <a href="about.html">About</a> |
+      <a href="contact.html">Contact</a>
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/jsqr"></script>
+  <script src="qrdecoder.js"></script>
+</body>
+</html>

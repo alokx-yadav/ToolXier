@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>XoXo Game</title>
+  <title>About Us - ToolXier</title>
+<meta name="description" content="Learn more about ToolXier, our mission, and the team behind the tools you use daily.">
+  <link rel="stylesheet" href="tictactoe.css" />
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet"/>
+</head>
+<body>
+
+  <header>
+    <div class="navbar">
+      <div class="header-content">
+        <a href="index.html" class="logo">ToolXier</a>
+        <nav>
+          <ul class="nav-links" id="navLinks">
+            <a href="index.html">Home</a>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <video autoplay muted loop playsinline id="bg-video">
+    <source src="bg1.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+
+  <audio id="bg-music" loop>
+    <source src="background-music.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <div class="game-container">
+    <h1>𝓧𝓸𝓧𝓸 𝓖𝓪𝓶𝓮</h1>
+
+    
+    <div id="game-board" class="game-board">
+      <div class="cell" onclick="makeMove(0)"></div>
+      <div class="cell" onclick="makeMove(1)"></div>
+      <div class="cell" onclick="makeMove(2)"></div>
+      <div class="cell" onclick="makeMove(3)"></div>
+      <div class="cell" onclick="makeMove(4)"></div>
+      <div class="cell" onclick="makeMove(5)"></div>
+      <div class="cell" onclick="makeMove(6)"></div>
+      <div class="cell" onclick="makeMove(7)"></div>
+      <div class="cell" onclick="makeMove(8)"></div>
+    </div>
+    
+    <div id="status-box" class="status-box">
+      <p id="message">Game in Progress</p>
+    </div>
+    <div class="game-info">
+      <p><strong>How to Play:</strong></p>
+      <ul>
+        <li>Player 1 is <strong>X</strong>, Player 2 is <strong>O</strong></li>
+        <li>Click on any empty square to make your move</li>
+        <li>The first to align 3 symbols in a row, column, or diagonal wins</li>
+        <li>If the board fills with no winner, it’s a draw</li>
+      </ul>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <p id="cpy">© 2025 <strong>ToolXier</strong> All rights reserved.</p>
+      <div class="social-icons">
+        <a href="https://www.linkedin.com/in/alok-ranjan-a317b430a/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://www.instagram.com/toolxier/" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://x.com/ToolXier" target="_blank"><i class="fab fa-twitter"></i></a>
+      </div>
+    </div>
+    <div class="footer-links">
+      <a href="privacy.html">Privacy Policy</a> |
+      <a href="terms.html">Terms</a> |
+      <a href="disclaimer.html">Disclaimer</a> |
+      <a href="about.html">About</a> |
+      <a href="contact.html">Contact</a>
+    </div>
+  </footer>
+
+  <script src="tictactoe.js"></script>
+</body>
+</html>

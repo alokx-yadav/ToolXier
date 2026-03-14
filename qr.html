@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>QR Maker</title>
+  <title>About Us - ToolXier</title>
+<meta name="description" content="Learn more about ToolXier, our mission, and the team behind the tools you use daily.">
+   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="qr.css" />
+</head>
+<body>
+
+  <video autoplay muted loop playsinline id="bg-video">
+    <source src="bg1.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <header>
+    <div class="navbar">
+      <div class="header-content">
+        <a href="index.html" class="logo">ToolXier</a>
+        <nav>
+          <ul class="nav-links" id="navLinks">
+            <a href="index.html">Home</a>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- QR Generator Container -->
+  <main class="container">
+    <h1>QR Maker</h1>
+
+    <div class="input-wrapper">
+      <textarea id="qrInput" placeholder="Enter text, link, email, number, etc."></textarea>
+      <div class="input-tools">
+        <button onclick="pasteFromClipboard()" title="Paste">📋</button>
+      </div>
+    </div>
+
+    <div class="button-row">
+      <button onclick="generateQR()">Generate QR</button>
+      <button onclick="resetQR()" class="reset-btn">Reset</button>
+      <h5>--------※‖※‖※‖※--------</h5>
+    </div>
+
+    <div id="qrBox" class="qr-box hidden">
+      <div id="qrcode" class="qr-center"></div>
+      <div class="qr-buttons">
+        <button onclick="downloadQR()">Download</button>
+        <button onclick="shareQR()">Share</button>
+      </div>
+    </div>
+  </main>
+
+  <!-- Info Section -->
+  <section class="info-section">
+    <h2>How This QR Generator Works</h2>
+    <p>This QR code generator lets you instantly convert your text, links, contact info, or anything else into a scannable QR code right inside your browser.</p>
+    <ul>
+      <li><strong>Step 1:</strong> Enter or paste any text (e.g., a link, phone number, or email).</li>
+      <li><strong>Step 2:</strong> Click <strong>“Generate QR”</strong> to create a unique QR code.</li>
+      <li><strong>Step 3:</strong> Download or share the QR with one click!</li>
+    </ul>
+    <p>No data is uploaded — everything is handled securely on your device. It’s fast, simple, and private.</p>
+  </section>
+
+
+  <script type='text/javascript' src='//pl27113772.profitableratecpm.com/b0/15/53/b0155329d319f9424afb6e14215d454e.js'></script>
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <p>© 2025 <strong>ToolXier</strong> All rights reserved.</p>
+      <div class="social-icons">
+        <a href="https://www.linkedin.com/in/alok-ranjan-a317b430a/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://www.instagram.com/toolxier/" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://x.com/ToolXier" target="_blank"><i class="fab fa-twitter"></i></a>
+      </div>
+    </div>
+    <div class="footer-links">
+      <a href="privacy.html">Privacy Policy</a> |
+      <a href="terms.html">Terms</a> |
+      <a href="disclaimer.html">Disclaimer</a> |
+      <a href="about.html">About</a> |
+      <a href="contact.html">Contact</a>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/qrcodejs/qrcode.min.js"></script>
+  <script src="qr.js"></script>
+</body>
+</html>
